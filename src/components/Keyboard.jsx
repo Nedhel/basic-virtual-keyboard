@@ -1,54 +1,58 @@
 import React from "react";
 import { Key } from "./Key";
 import { KeyShift } from "./KeyShift";
+import { KeySpace } from "./KeySpace";
 
-export function Keyboard(){
+export function Keyboard({isUpper, shiftFuncion, handlePressKey}){
     return (
         <div>
             <div className="flex justify-center">
-                <Key isUpper={false} lowerCase="1" upperCase="!" />
-                <Key isUpper={false} lowerCase="2" upperCase="'" />
-                <Key isUpper={false} lowerCase="3" upperCase="#" />
-                <Key isUpper={false} lowerCase="4" upperCase="$" />
-                <Key isUpper={false} lowerCase="5" upperCase="%" />
-                <Key isUpper={false} lowerCase="6" upperCase="&" />
-                <Key isUpper={false} lowerCase="7" upperCase="/" />
-                <Key isUpper={false} lowerCase="8" upperCase="(" />
-                <Key isUpper={false} lowerCase="9" upperCase=")" />
-                <Key isUpper={false} lowerCase="0" upperCase="=" />
+                <Key isUpper={isUpper} lowerCase="1" upperCase="!" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="2" upperCase="'" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="3" upperCase="#" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="4" upperCase="$" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="5" upperCase="%" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="6" upperCase="&" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="7" upperCase="/" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="8" upperCase="(" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="9" upperCase=")" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="0" upperCase="=" handlePressKey={handlePressKey}/>
             </div>
             <div className="flex justify-center">
-                <Key isUpper={false} lowerCase="q" upperCase="Q" />
-                <Key isUpper={false} lowerCase="w" upperCase="W" />
-                <Key isUpper={false} lowerCase="e" upperCase="E" />
-                <Key isUpper={false} lowerCase="r" upperCase="R" />
-                <Key isUpper={false} lowerCase="t" upperCase="T" />
-                <Key isUpper={false} lowerCase="y" upperCase="Y" />
-                <Key isUpper={false} lowerCase="u" upperCase="U" />
-                <Key isUpper={false} lowerCase="i" upperCase="I" />
-                <Key isUpper={false} lowerCase="o" upperCase="O" />
-                <Key isUpper={false} lowerCase="p" upperCase="P" />
+                <Key isUpper={isUpper} lowerCase="q" upperCase="Q" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="w" upperCase="W" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="e" upperCase="E" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="r" upperCase="R" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="t" upperCase="T" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="y" upperCase="Y" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="u" upperCase="U" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="i" upperCase="I" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="o" upperCase="O" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="p" upperCase="P" handlePressKey={handlePressKey}/>
             </div>
             <div className="flex justify-center">
-                <Key isUpper={false} lowerCase="a" upperCase="A" />
-                <Key isUpper={false} lowerCase="s" upperCase="S" />
-                <Key isUpper={false} lowerCase="d" upperCase="D" />
-                <Key isUpper={false} lowerCase="f" upperCase="F" />
-                <Key isUpper={false} lowerCase="g" upperCase="G" />
-                <Key isUpper={false} lowerCase="h" upperCase="H" />
-                <Key isUpper={false} lowerCase="j" upperCase="J" />
-                <Key isUpper={false} lowerCase="k" upperCase="K" />
-                <Key isUpper={false} lowerCase="l" upperCase="L" />
+                <Key isUpper={isUpper} lowerCase="a" upperCase="A" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="s" upperCase="S" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="d" upperCase="D" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="f" upperCase="F" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="g" upperCase="G" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="h" upperCase="H" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="j" upperCase="J" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="k" upperCase="K" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="l" upperCase="L" handlePressKey={handlePressKey}/>
             </div>
             <div className="flex justify-center">
-                <KeyShift isUpper={false} />
-                <Key isUpper={false} lowerCase="z" upperCase="Z" />
-                <Key isUpper={false} lowerCase="x" upperCase="X" />
-                <Key isUpper={false} lowerCase="c" upperCase="C" />
-                <Key isUpper={false} lowerCase="v" upperCase="V" />
-                <Key isUpper={false} lowerCase="b" upperCase="B" />
-                <Key isUpper={false} lowerCase="n" upperCase="N" />
-                <Key isUpper={false} lowerCase="m" upperCase="M" />
+                <KeyShift isUpper={isUpper} shiftFunction={shiftFuncion} />
+                <Key isUpper={isUpper} lowerCase="z" upperCase="Z" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="x" upperCase="X" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="c" upperCase="C" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="v" upperCase="V" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="b" upperCase="B" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="n" upperCase="N" handlePressKey={handlePressKey}/>
+                <Key isUpper={isUpper} lowerCase="m" upperCase="M" handlePressKey={handlePressKey}/>
+            </div>
+            <div className="flex justify-center">
+                <KeySpace handlePressKey={handlePressKey} />
             </div>
         </div>
     )
