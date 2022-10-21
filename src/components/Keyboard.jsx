@@ -2,6 +2,7 @@ import React from "react";
 import { Key } from "./Key";
 import { KeyShift } from "./KeyShift";
 import { KeySpace } from "./KeySpace";
+import { KeyErase } from "./KeyErase";
 
 export function Keyboard({isUpper, shiftFuncion, handlePressKey}){
     return (
@@ -17,6 +18,7 @@ export function Keyboard({isUpper, shiftFuncion, handlePressKey}){
                 <Key isUpper={isUpper} lowerCase="8" upperCase="(" handlePressKey={handlePressKey}/>
                 <Key isUpper={isUpper} lowerCase="9" upperCase=")" handlePressKey={handlePressKey}/>
                 <Key isUpper={isUpper} lowerCase="0" upperCase="=" handlePressKey={handlePressKey}/>
+                <KeyErase handlePressKey={handlePressKey}/>
             </div>
             <div className="flex justify-center">
                 <Key isUpper={isUpper} lowerCase="q" upperCase="Q" handlePressKey={handlePressKey}/>

@@ -13,11 +13,19 @@ function App() {
     }
     function handlePressKey(letter) {
         if (current === "input1") {
-            setInputs({ ...inputs, input1: inputs.input1 + letter });
+            if (letter === "backspace") {
+                setInputs({ ...inputs, input1: handleErase() });
+            } else {
+                setInputs({ ...inputs, input1: inputs.input1 + letter });
+            }
             console.log(4);
             console.log(current);
         } else {
-            setInputs({ ...inputs, input2: inputs.input2 + letter });
+            if (letter === "backspace") {
+                setInputs({ ...inputs, input2: handleErase() });
+            } else {
+                setInputs({ ...inputs, input2: inputs.input2 + letter });
+            }
             console.log(5);
             console.log(current);
         }
@@ -34,6 +42,19 @@ function App() {
     function handleInputFocus(e) {
         setCurrent(e.target.id);
         console.log(1);
+    }
+    function handleErase() {
+        let size;
+        let input;
+        if (current === "input1") {
+            console.log(inputs.input1.length);
+            size = inputs.input1.length;
+            input = inputs.input1.substring(0, size - 1);
+        } else {
+            size = inputs.input2.length;
+            input = inputs.input2.substring(0, size - 1);
+        }
+        return input;
     }
 
     return (
